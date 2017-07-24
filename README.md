@@ -16,6 +16,6 @@ Data are output to a file called ```grades.csv``` with row containing a unique s
 ## Syntax
 - ```extractBubbles(pathToImages)```
 - ```extractBubbles()```  will prompt the user to input a directory
-- Images should in png format.
+- Images should in ```.png``` format.
 - ```grades.csv``` and ```slices.cvs``` will be written to the directory listed
 - Number of ROIs will be inferred from ```ROIs.csv``` or asked when generating creating the ROIs
