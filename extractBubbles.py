@@ -41,7 +41,7 @@ def driver():
 			[img, scaleFactor] = reader(file)
 			#find the 'corners' of the sheet
 			skewedImg = getCorners(img, scaleFactor)
-			if skewedImg != -1:
+			if skewedImg != []:
 				#get all scores in sheet
 				scores = getBubbles(skewedImg)
 				scores.append(file)
@@ -330,9 +330,9 @@ def getCorners(img, scaleFactor):
 	#if the diagnals are not approximately equal, skip it.
 	#future versions will handle this error
 	if (positiveDiag > negativeDiag * 1.05):
-		return -1
+		return []
 	elif (negativeDiag > positiveDiag * 1.05):
-		return -1
+		return []
 
 	newDims = (tr[0]-tl[0],bl[1]-tl[1])
 	points1 = np.float32([tl,tr,bl,br])
